@@ -54,4 +54,18 @@ public class MyController {
 
         cRepo.delete(customerEntity);
     }
+
+    @GetMapping("/get-customer-using-id-requestParam")
+    public CustomerEntity getCusRequestParam(@RequestParam ("id") Long id){
+        Optional<CustomerEntity> c=cRepo.findById(id);
+        CustomerEntity customerEntity=c.get();
+
+        return customerEntity;
+    }
+
+    @GetMapping("/get-customer-using-pathVariable/{id }")
+    public CustomerEntity getCusPathVariable(@PathVariable ("id") Long id){
+
+        return cRepo.findById(id).get();
+    }
 }
