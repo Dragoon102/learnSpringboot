@@ -4,14 +4,27 @@ package com.example.demo2.dao;
 public class CustomerDao {
     private Long id;
     private String customerName;
-    public CustomerDao(Long id,String customerName){
-        super();
-        this.id=id;
-        this.customerName=customerName;
-    }
+    private String address;
+    private Double age;
 
     public CustomerDao(){
 
+    }
+
+    public Double getAge() {
+        return age;
+    }
+
+    public void setAge(Double age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getCustomerName() {

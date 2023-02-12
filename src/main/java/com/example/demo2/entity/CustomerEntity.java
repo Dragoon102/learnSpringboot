@@ -14,14 +14,28 @@ public class CustomerEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String customerName;
-    public CustomerEntity(Long id, String customerName){
-        super();
-        this.id=id;
-        this.customerName=customerName;
-    }
+
+    private String address;
+    private Double age;
 
     public CustomerEntity(){
 
+    }
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+    public Double getAge() {
+        return age;
+    }
+
+    public void setAge(Double age) {
+        this.age = age;
     }
 
     public String getCustomerName() {
