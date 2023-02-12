@@ -63,7 +63,7 @@ public class MyController {
         return customerEntity;
     }
 
-    @GetMapping("/get-customer-using-pathVariable/{id }")
+    @GetMapping("/get-customer-using-id-pathVariable/{id}")
     public CustomerEntity getCusPathVariable(@PathVariable ("id") Long id){
 
         return cRepo.findById(id).get();
