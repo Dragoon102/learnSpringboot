@@ -1,20 +1,16 @@
-package com.example.demo2.myController;
+package com.example.demo2.dao;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 
-@Entity
-public class Customer {
-    @Id
+public class CustomerDao {
     private Long id;
     private String customerName;
-    public Customer(Long id,String customerName){
+    public CustomerDao(Long id,String customerName){
         super();
         this.id=id;
         this.customerName=customerName;
     }
 
-    public Customer(){
+    public CustomerDao(){
 
     }
 
